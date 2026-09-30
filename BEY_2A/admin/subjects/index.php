@@ -108,16 +108,18 @@ $result = mysqli_query ($conn, $sql);
                             <td>
                                 <a
                                     href="subject_form.html"
-                                    class="btn btn-warning btn-sm"
+                                    href="edit.php?id=<?php echo $row['id'];?>"
                                 >
                                     Edit
                                 </a>
 
-                                <button
+                                <a
                                     class="btn btn-danger btn-sm"
-                                >
+                                    href="delete.php?id=<?php echo $row['id'];?>"
+                                    onclick = "return confirm('Are You Sure Delete This Record?')"
+                                >   
                                     Delete
-                                </button>
+                                </a>
                             </td>
                         </tr>
                         <?php }?>
